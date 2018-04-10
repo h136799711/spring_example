@@ -1,4 +1,30 @@
+
+# tomcat config
 server:
   port: 8090
   tomcat:
     uri-encoding: UTF-8
+# spring config
+spring:
+  banner:
+    location: classpath:banner.txt
+  mvc:
+    favicon:
+      enabled: false
+
+# actuator config
+management:
+  endpoints:
+    enabled-by-default: false
+    web:
+      exposure:
+        include: ["health","info","shutdown"]
+  endpoint:
+    shutdown:
+      enabled: true
+    health:
+      enabled: true
+    info:
+      enabled: true
+  server:
+    port: 54001

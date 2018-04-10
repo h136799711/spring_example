@@ -1,0 +1,14 @@
+server:
+  port: 8090
+  tomcat:
+    uri-encoding: UTF-8
+  servlet:
+    session:
+      timeout: 1200
+
+management:
+  health:
+    mail:
+      enabled: false
+  server:
+    port:  54001

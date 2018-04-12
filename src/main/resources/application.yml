@@ -11,7 +11,10 @@ spring:
   mvc:
     favicon:
       enabled: false
-
+  application:
+    name: default.app
+  profiles:
+    active: dev
 # actuator config
 management:
   endpoints:

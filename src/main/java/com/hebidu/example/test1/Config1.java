@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 @ConfigurationProperties(prefix = "cfg")
 public class Config1 {
+
     private final Jdbc jdbc = new Jdbc();
     private String name;
 

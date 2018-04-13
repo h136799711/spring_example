@@ -1,0 +1,30 @@
+<!--<mvc:annotation-driven>-->
+<!--<mvc:message-converters>-->
+<!--<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">-->
+<!--<property name="objectMapper">-->
+<!--<bean class="com.fasterxml.jackson.databind.ObjectMapper">-->
+<!--&lt;!&ndash; 处理responseBody 里面日期类型 &ndash;&gt;-->
+<!--&lt;!&ndash;   <property name="dateFormat">-->
+<!--<bean class="java.text.SimpleDateFormat">-->
+<!--<constructor-arg type="java.lang.String" value="yyyy-MM-dd HH:mm:ss" />-->
+<!--</bean>-->
+<!--</property>  &ndash;&gt;-->
+<!--&lt;!&ndash; 为null字段时不显示 &ndash;&gt;-->
+<!--<property name="serializationInclusion">-->
+<!--<value type="com.fasterxml.jackson.annotation.JsonInclude.Include">NON_NULL</value>-->
+<!--</property>-->
+<!--<property name="propertyNamingStrategy">-->
+<!--&lt;!&ndash;<bean class="com.xxx.serializer.MyPropertyNamingStrategyBase" />&ndash;&gt;-->
+<!--<bean class="com.fasterxml.jackson.databind.PropertyNamingStrategy.LowerCaseWithUnderscoresStrategy" />-->
+<!--</property>-->
+<!--</bean>-->
+<!--</property>-->
+<!--<property name="supportedMediaTypes">-->
+<!--<list>-->
+<!--<value>text/html;charset=UTF-8</value>-->
+<!--<value>application/json; charset=UTF-8</value>-->
+<!--</list>-->
+<!--</property>-->
+<!--</bean>-->
+<!--</mvc:message-converters>-->
+<!--</mvc:annotation-driven>-->

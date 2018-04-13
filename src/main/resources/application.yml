@@ -1,4 +1,9 @@
+# hebidu custom config
+hebidu:
+  json:
+    prop_naming_style: snake_case
 
+# logging
 # tomcat config
 server:
   port: 8090
@@ -13,6 +18,14 @@ spring:
       enabled: false
   application:
     name: default.app
+  jpa:
+    open-in-view: false
+# datasource config
+  datasource:
+    url: jdbc:mysql://47.88.216.242/bookstore?characterEncoding=utf8&useSSL=false
+    username: hebidu
+    password: 364945361
+    driver-class-name: com.mysql.cj.jdbc.Driver
   profiles:
     active: dev
 # actuator config
@@ -31,3 +44,5 @@ management:
       enabled: true
   server:
     port: 54001
+logging:
+  file: spring.log

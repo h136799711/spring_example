@@ -1,6 +1,7 @@
 package com.hebidu.example.test1;
 
 
+import com.hebidu.example.test1.db.TestMysql;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,8 +15,22 @@ public class Test1Rest {
     @Value("${spring.application.name}")
     private String name;
 
+
+    @Autowired
+    private TestMysql testMysql;
+
+
     @Autowired
     private Config1 cfg1;
+
+    @RequestMapping("/db")
+    String db() {
+        if (this.testMysql == null) {
+            return "autowired failed";
+        }
+        this.testMysql.test();
+        return "success";
+    }
 
     @RequestMapping("/")
     String index()
@@ -33,7 +48,8 @@ public class Test1Rest {
     Config1 cfg1() {
         return cfg1;
     }
-    
+
+
 // webflux 下无法使用
 //    @RequestMapping("/req")
 //    String req(HttpServletRequest request)
